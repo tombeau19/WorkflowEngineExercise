@@ -11,8 +11,8 @@ namespace WorkflowEngineExercise
             workflow.AddActivity(new DoThisThing());
             workflow.AddActivity(new DoThisOtherThing());
 
-            var workflowEngine = new WorkflowEngine(workflow);
-            workflowEngine.Run();
+            var workflowEngine = new WorkflowEngine();
+            workflowEngine.Run(workflow);
 
         }
     }
