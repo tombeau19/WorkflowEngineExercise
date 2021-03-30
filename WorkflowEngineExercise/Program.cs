@@ -6,7 +6,14 @@ namespace WorkflowEngineExercise
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var workflow = new Workflow();
+
+            workflow.AddActivity(new DoThisThing());
+            workflow.AddActivity(new DoThisOtherThing());
+
+            var workflowEngine = new WorkflowEngine(workflow);
+            workflowEngine.Run();
+
         }
     }
 }
